@@ -10,7 +10,7 @@ object StrongLangParser extends StandardTokenParsers {
 
   lexical.reserved += ("bodyweight", "height", "benchpress", "squat", "deadlift", is, "kgs", "lbs", "m", "ft")
 
-  def query = (pHeight).? ~ pBodyWeight ~ pLift.*
+  def query = pHeight.? ~ pBodyWeight ~ pLift.*
 
   def pBodyWeight = "bodyweight" ~ is ~ weight
 
